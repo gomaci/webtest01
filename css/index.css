@@ -1,0 +1,455 @@
+#wrap{
+    width: 100%;
+}
+
+#header{
+    width: 100%;
+    height: 160px;
+}
+#header_top{
+    margin: 0 auto;
+    width: 1000px;
+    height: 113px;
+    position: relative;
+    /* 자식요소 포지션을 사용할때 부모 요소를 기준으로 설정 */
+}
+#header_top .logo{
+    float: left;
+    margin: 50px 0 0 5px;
+}
+
+#header_top .group{
+    float: left;
+    margin-left:150px;
+}
+#header_top .group .q_nav{
+    float: left;
+    margin-top: 50px;
+}
+#header_top .group .q_nav > li{
+    float: left;
+}
+/* 리스트에서 첫번째 요소를 의미 */
+#header_top .group .q_nav > li:first-child{}
+/* 리스트에서 마지막번째 요소를 의미 */
+
+#header_top .group .q_nav > li:after{
+    content: "·";
+    font-size: 20px;
+    font-weight: 900;
+    padding: 0 15px;
+    position: relative;
+    top:2px;
+}
+#header_top .group .q_nav > li:last-child::after{
+    content: " ";
+    padding: 0 1px;
+}
+
+#header_top .group .q_nav > li > a{
+    font-size: 15px;
+    color:#333;
+}
+
+#header_top .group .input{
+     float: left;
+     margin-left: 20px;
+     margin-top: 55px;
+     background-color: #ccc;
+     width: 260px;
+     height: 28px;
+     padding-left: 15px;
+}
+#header_top .group .input span{
+    float: left;
+    line-height: 28px;
+    /* 영역에서 글자를 세로 가운데 정렬은
+    line-height를 영역 높이 설정하면 그높이 세로로 
+    가운데 정렬이됩니다 */
+}
+#header_top .group .input a{
+    float:right;
+    margin-top: 3px;
+}
+#header_top .infomn{
+    position: absolute;
+    top:10px;
+    right:10px;
+}
+#header_top .infomn li{
+    float: left;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right:1px solid #333;
+    line-height: 12px;
+    /* line-height는 순수한 행간뿐아니라 세로로 정렬 및 칸 높이도 설정 가능하다 */
+}
+/* nth-child(인덱스) 리스트중에 번호로 요소를 선택하는 가상선택자 */
+#header_top .infomn li:nth-child(1){}
+#header_top .infomn li:nth-child(2){
+    /* background-color: aqua; */
+}
+#header_top .infomn li:nth-child(3){}
+#header_top .infomn li:nth-child(4){}
+#header_top .infomn li:nth-child(5){}
+
+#header_top .infomn li:last-child{
+    padding-right: 0px;
+    margin-right: 0px;
+    border-right: 0px;
+}
+#header_top .infomn a{
+    font-size: 12px;
+    color: #333;
+}
+
+#header_nav{
+    width: 100%;
+    height: 46px;
+    background: url(../images/nav_area.jpg) no-repeat 50% 0;
+}
+#header_nav ul{
+    margin: 0 auto;
+    width: 1005px;
+}
+#header_nav li{ 
+    float: left;
+}
+
+#mainimg{
+    width: 100%;
+    height:464px;
+    /* 
+    background-image: url(../images/main_img.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0; 
+    */
+    background: url(../images/main_img.jpg) no-repeat 50% 0;
+}
+#contents{
+    width: 100%;
+    height: auto;
+    /* height: auto; 여기에 높이는 안에 있는 자식요소의 크기 자동으로 맞춤 */ 
+    padding-top: 40px;
+}
+#item{
+    margin: 0 auto;
+    width: 1000px;
+    height: 260px;
+}
+#item .item_h{
+    float: left;
+    width: 170px;
+    height: 260px;
+}
+#item .item_h h3{
+    font-size: 24px;
+    color: #000;
+    border-top:2px solid #000;
+    border-bottom:2px solid #000;
+    padding: 11px 0;
+}
+
+#item .item_h ul{
+    margin-top: 30px;
+}
+#item .item_h li{
+    margin-bottom: 15px;
+}
+#item .item_h a{
+    font-size: 14px;
+    font-weight: 700;
+}
+#item .item_h a:hover{
+    text-decoration: underline;
+    color: orange;
+}
+/* 
+#item .item_h a:hover::before{} 해당요소 앞에 생성
+#item .item_h a:hover::after{}해당요소 뒤에서 생성
+content: "기호 또는 문자" 가상선택자에 의해 나타나는 속성
+*/
+#item .item_h a:hover::after{
+    content: ">";
+    font-size: 14px;
+}
+
+#item .item_b{
+    float: right;
+    width: 800px;
+    height: 260px;
+}
+#item .item_b ul{}
+#item .item_b li{
+    float: left;
+    width: 190px;
+    height: 260px;
+    border: 1px solid #ccc;
+    margin-right: 13px;
+    box-sizing: border-box;
+}
+#item .item_b li:last-child{
+    margin-right: 0px;
+}
+#item .item_b img{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+#item .item_b h4{
+    padding: 10px 0 5px 10px;
+    font-size: 16px;
+}
+#item .item_b span{
+    padding-left: 10px;
+    font-size: 13px;
+}
+
+#shop{
+    margin: 0 auto;
+    margin-top: 45px;
+    width: 1000px;
+    height: 275px;
+}
+#shop > a{
+    float: left;
+    margin-right: 17px;
+}
+#shop > a:last-child{
+    margin-right: 0;
+}
+
+#system{
+    margin-top: 40px;
+    width: 100%;
+    height: 305px;
+    background: url(../images/movie.png) no-repeat 50% 0;
+    padding-top: 200px;
+    box-sizing: border-box;
+}
+#system> a{
+    margin: 0 auto;
+    display: block;
+    width: 170px;
+    height: 50px;
+    border: 2px solid #fff;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.5s;
+}
+#system > a:hover{
+    background-color: #fff;
+    color: #333;
+}
+#style{
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 1000px;
+    height: 260px;
+}
+#style .style_h{
+    float: left;
+    width: 170px;
+    height:260px;
+}
+#style .style_h h3{
+    font-size: 26px;
+    color: #000;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 10px 0;
+}
+#style .style_h ul{
+    margin-top: 25px;
+}
+#style .style_h li{
+    margin-bottom: 6px;
+}
+#style .style_h a{
+    font-size: 16px;
+}
+#style .style_h a:hover{
+    color:aqua;
+}
+
+#style .style_b{
+    float: right;
+    width: 800px;
+    height:260px;
+}
+#style .style_b ul{}
+#style .style_b li{
+    float: left;
+    margin-right: 13px;
+    width: 190px;
+    height: 260px;
+    border:1px solid #ccc;
+    box-sizing: border-box;
+}
+#style .style_b li:last-child{
+    margin-right: 0px;
+}
+
+#style .style_b img{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+#style .style_b h4{
+    padding: 10px 0 5px 10px;
+    font-size: 16px;
+}
+#style .style_b p{
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+
+#banner{
+       margin: 0 auto;
+       margin-top: 40px;
+       width: 1000px; height: 400px;
+       }
+#banner .group{
+    float: left;
+    width: 492px;
+}
+#banner .group > a:first-child{
+  display: block;
+  margin-bottom: 15px;
+}
+#banner > a{
+    float: right;
+}
+       
+#info{
+     margin-top: 80px;
+     width: 100%;
+     height: 165px;
+     background:url(../images/footer_top_bg.jpg) repeat-x 0 0;
+     }
+#info .info_banner{
+    margin: 0 auto;
+    width: 1000px;
+    height: 110px;
+}
+#info .info_notice{
+    margin: 0 auto;
+    width: 1000px;
+    height: 55px;
+}
+#info .info_notice .ttl{
+    float: left;
+    font-size: 18px;
+    color: #fff;
+    line-height:55px;
+}
+#info .info_notice .txt{
+    float: left;
+    margin-left: 25px;
+    font-size: 15px;
+    color: #fff;
+    line-height:55px;
+}
+#info .info_notice .date{
+    float: right;
+    font-size: 15px;
+    color: #fff;
+    line-height:55px;
+}
+
+#footer{
+    width: 100%;
+    height: 445px;
+}
+#footer .top{
+    width: 100%;
+    height: 295px;
+    
+}
+#footer .top_in{
+    margin: 0 auto;
+    width: 1000px;
+    height: 295px;
+   
+}
+
+#footer .top_in .main{
+    float: left;
+    margin: 60px 0 0 60px;
+}
+#footer .top_in .main > li{
+    float: left;
+    margin-right: 30px;
+}
+
+#footer .top_in .sub li{
+    margin-bottom: 5px;
+}
+#footer .top_in .sub li:first-child{
+    margin-bottom: 8px;
+}
+
+#footer .top_in .call_center{
+    float: right;
+    width: 240px;
+}
+#footer .call_center h4{
+    width: 240px;
+    text-align: center;
+    font-size: 30px;
+    border-bottom:2px solid #000 ;
+    padding:24px 0 10px 0;
+}
+#footer .call_center h5{
+    margin-top: 10px;
+    font-size: 16px;
+}
+#footer .call_center p{
+    font-size: 15px;
+}
+#footer .call_center ul{
+    margin-top: 7px;
+    width: 240px;
+}
+#footer .call_center li{
+    float: left;
+    margin-right: 5px;
+    width: 110px;
+    height: 65px;
+    text-align: center;
+    line-height: 65px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+#footer .bottom{ 
+    width: 100%;
+    height: 145px;
+    background-color: beige;
+}
+#footer .bottom_in{
+    margin: 0 auto; 
+    width: 1000px;
+    height: 145px;
+    background-color: rgb(153, 153, 105);
+}
+
+#footer .bottom_in .infomn{}
+#footer .bottom_in .infomn li{
+    float: left;
+}
+#footer .bottom_in .infomn li:after{
+    content: "/";
+    font-size: 10px;
+    padding: 0 10px;
+    position: relative;
+    top:-2px;
+}
+#footer .bottom_in .infomn li:last-child::after{
+   content: " ";
+}
+#footer .bottom_in .infomn a{
+    font-size: 15px;
+    font-weight: 500;
+}
